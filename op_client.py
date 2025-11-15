@@ -135,8 +135,8 @@ def stream_login_items() -> Generator[LoginItem, None, None]:
             continue
 
         # This print to stderr will be overwritten by `print_compromised`
-        print(f"Checking item {i}/{total} ({summary.get('title', '...')})...", end="\r", file=sys.stderr)
-        sys.stderr.flush()
+        # print(f"Checking item {i}/{total} ({summary.get('title', '...')})...", end="\r", file=sys.stderr)
+        # sys.stderr.flush()
 
         try:
             detail_out = _run_op(["op", "item", "get", item_id, "--format", "json"])
